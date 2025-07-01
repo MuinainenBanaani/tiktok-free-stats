@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TikTok Free Stats</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/countup.js@2.6.2/dist/countUp.umd.js"></script>
+  <script defer src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-indigo-900 to-purple-800 text-white min-h-screen flex flex-col items-center justify-center p-4">
 
+  <h1 class="text-4xl font-bold mb-6 text-center">TikTok Free Stats Tracker</h1>
+
+  <div class="mb-6 flex flex-col items-center">
+    <input id="usernameInput" class="rounded-xl px-4 py-2 text-black w-72" placeholder="Enter TikTok Username or URL" />
+    <button onclick="fetchStats()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-xl">Track</button>
+  </div>
+
+  <div id="refreshTime" class="mb-4 text-sm text-white/80 hidden">Next refresh in: <span id="countdown">5</span>s</div>
+
+  <div id="statsContainer" class="grid grid-cols-2 gap-4 w-full max-w-md text-center hidden">
+    <div class="bg-white/10 p-4 rounded-xl"><strong>Followers</strong><p id="followers">--</p></div>
+    <div class="bg-white/10 p-4 rounded-xl"><strong>Likes</strong><p id="likes">--</p></div>
+    <div class="bg-white/10 p-4 rounded-xl"><strong>Videos</strong><p id="videos">--</p></div>
+    <div class="bg-white/10 p-4 rounded-xl"><strong>Views</strong><p id="views">--</p></div>
+    <div class="bg-white/10 p-4 rounded-xl"><strong>Shares</strong><p id="shares">0</p></div>
+    <div class="bg-white/10 p-4 rounded-xl"><strong>Saves</strong><p id="saves">0</p></div>
+  </div>
+
+  <footer class="mt-12 text-sm text-white/70">
+    Made by <a href="https://tiktok.com/@mysticatten" target="_blank" class="underline hover:text-pink-400">@Mysticatten</a>
+  </footer>
+
+</body>
+</html>
